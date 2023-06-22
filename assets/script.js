@@ -43,7 +43,13 @@ function showNextSlide(){
 	updateActiveDot();
 }
 ///Dots///
-const dots = document.querySelectorAll(".dot");
+for (let i = 0; i < slides.length; i++){
+const newdots = document.querySelector(".dots");
+const dot = document.createElement("div");
+dot.classList.add("dot");
+newdots.appendChild(dot);
+}
+const dots = document.querySelectorAll(".dot")
 updateActiveDot() 
 function updateActiveDot() {
 	dots.forEach((dot, index) => {
